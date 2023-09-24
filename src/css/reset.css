@@ -33,3 +33,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+body{
+  font-family: 'Open Sans' sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
