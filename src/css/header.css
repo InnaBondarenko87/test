@@ -1,9 +1,9 @@
 .header {
-  background-image:url('./img/retina/header_mobile.jpg');
+  background-image:url('../img/retina/header_mobile.jpg');
   background-color: rgba(25, 28, 38, 0.20);
   max-width: 418px;
   width: 100%;
-  height: 100%;
+  min-height: 580px;
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,23 +17,11 @@
   padding-right: 31px;
 }
 
-.naviagation{
-  display: inline-flex;
-  max-width: 410px;
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 112px;
-  justify-content: space-between;
-}
-
 .logotype{
   display: inline-flex;
 }
 
-.burger_menu{
- display: inline-flex;
- margin-right: 8px;
-}
+
 
 .header-info{
   max-width: 306px;
@@ -48,15 +36,17 @@
   line-height: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .title-header {
-  color: #FFF;
+  color:var(--primari-brand);
   font-family: Raleway;
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 }
 
 .info-header {
@@ -69,13 +59,154 @@
   letter-spacing: 0.02em;
 }
 
-@media screen and (max-width:767px) { 
+@media screen and (max-width:689px) {
+  /* .container{
+    max-width: 570px;
+  } */
+  .menu-page-nav{
+    display: none;
+  }
 
-@media screen and (min-resolution:192dpi) and (max-width:767px),
-screen and (min-resolution:2dppx) and (max-width:767px),
-screen and (min-device-pixel-ratio:2) and (max-width:767px) {
-  .header {
-    background-image: url('./img/retina/header_mobile@2x.jpg');
+  .naviagation {
+    display: inline-flex;
+    max-width: 410px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 112px;
+    justify-content: space-between;
+  }
+
+  .burger_menu {
+    display: inline-flex;
+    margin-right: 8px;
+    fill:var(--primari-brand);
+  }
+
+  .burger_menu:focus,
+  .burger_menu:hover {
+    fill:var(--accent-color);
+
   }
 }
+
+.mobile-menu {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
 }
+
+
+.mobile-close-menu-btn {
+  position: absolute;
+  padding: 0;
+  line-height: 0;
+  background-color:transparent;
+  top: 48px;
+  right: 31px;
+}
+
+.mobile-menu-container{
+  position: relative;
+}
+
+/* .li {}
+
+.address {}
+
+.header-btn {}
+
+.social-menu {} */
+
+
+
+
+
+@media screen and (max-width:689px) { 
+
+@media screen and (min-resolution:192dpi) and (max-width:689px),
+screen and (min-resolution:2dppx) and (max-width:689px),
+screen and (min-device-pixel-ratio:2) and (max-width:689px) {
+  .header {
+    background-image: url('../img/retina/header_mobile@2x.jpg');
+  }
+
+
+}
+}
+
+@media screen and (min-width:690px) {
+  .header {
+    background-image:url('../img/retina/header_tablet.jpg');
+  }
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .burger_menu{
+    display: none;
+  }
+
+  .logotype {
+    display: none;
+  }
+
+  .menu-page-nav {
+    display: flex;
+    min-width: 552px;
+    width: 100%;
+    padding-left: 18px;
+    margin-top: 40px;
+    margin-bottom: 184px;
+  }
+  
+    .nav-link {
+      display:flex;
+      gap: 24px;
+      width: 368px;
+      /* padding-left: 18px; */
+    }
+  
+    .link {
+      color: var(--primari-brand);
+      font-family: Open Sans;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+  
+    .header-btn {
+      color: var(--primari-brand);
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      border-radius: 25px;
+      border: 1px solid var(--accent-color);
+      width: 160px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+}
+
+
+@media screen and (min-width:690px) {
+
+  @media screen and (min-resolution:192dpi) and (min-width:690px),
+  screen and (min-resolution:2dppx) and (max-width:690px),
+  screen and (min-device-pixel-ratio:2) and (max-width:690px) {
+    .header {
+      background-image: url('../img/retina/header_tablet@2x.jpg');
+    }
+  }
+}
+
+
