@@ -1,1 +1,0 @@
-{"version":3,"file":"helper-CcItgys7.js","sources":["../../src/scripts/helper.js"],"sourcesContent":["function add(a, b) {\n  return a - b;\n}\n\nexport default add;\n"],"names":["add","a","b"],"mappings":"ssBAAA,SAASA,EAAIC,EAAGC,EAAG,CACjB,OAAOD,EAAIC,CACb"}
