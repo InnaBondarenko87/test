@@ -1,50 +1,25 @@
-// import add from './scripts/helper';
+const NOTIFICATION_DELAY = 3000;
 
-// console.log(add(5, 2));
-const FEEDBACK_DATA_KEY = 'feedback-form-state';
-const form = document.querySelector('.feedback-form');
+const notification = document.querySelector('.js-alert');
+notification.addEventListener('click', onNotificationClick);
+let timerId = null;
 
-let formData = { email: '', message: '' };
+showNotification();
 
-const initialFormData = JSON.parse(localStorage.getItem(FEEDBACK_DATA_KEY));
+function showNotification() {
+  notification.classList.add('is-visible');
 
-if (initialFormData !== null && initialFormData !== '') {
-  try {
-    formData = JSON.parse(initialFormData);
-
-    for (const item in formData) {
-      form.elements[item].value = formData[item];
-    }
-  } catch {}
+  timerId = setTimeout(() => {
+    console.log('setTimeout');
+    hideNotification();
+  }, NOTIFICATION_DELAY);
 }
 
-form.addEventListener('input', e => {
-  const inputEl = e.target.inputEl;
-  if (inputEl === 'input' || inputEl === 'textarea') {
-    for (const item in formData) {
-      formData[item] = form.elements[item].value.trim();
-    }
+function onNotificationClick() {
+  hideNotification();
+  clearTimeout(timerId);
+}
 
-    localStorage.setItem(FEEDBACK_DATA_KEY, JSON.stringify(formData));
-  }
-});
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-
-  for (const item in formData) {
-    if (!form.elements[item].value) {
-      alert('All form fields must be filled in');
-
-      return;
-    }
-  }
-
-  for (const item in formData) {
-    form.elements[item].value = '';
-  }
-
-  localStorage.removeItem(FEEDBACK_DATA_KEY);
-
-  console.dir(formData);
-});
+function hideNotification() {
+  notification.classList.remove('is-visible');
+}
