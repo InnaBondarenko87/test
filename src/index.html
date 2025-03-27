@@ -15,8 +15,8 @@
       <a href="./page-2.html">page-2</a>
     </section>
 
-    <form class="feedback-form" autocomplete="off">
-      <!-- <label>
+    <!-- <form class="feedback-form" autocomplete="off"> -->
+    <!-- <label>
         Email
         <input type="email" name="email" autofocus />
       </label>
@@ -26,11 +26,22 @@
       </label>
       <button type="submit">Submit</button> -->
 
-      <!--NOTIFICATION -->
-      <p class="alert success js-alert">Success!</p>
-    </form>
+    <!-- </form> -->
 
-    <script type="module" src="./main.js"></script>
+    <!--NOTIFICATION -->
+    <p class="alert success js-alert">Success!</p>
+
+    <!--timer-->
+    <div class="timer">
+      <p class="clockface"></p>
+
+      <div class="actions">
+        <button class="timer-btn" data-action-start>Start</button>
+        <button class="timer-btn" data-action-stop>Stop</button>
+      </div>
+    </div>
+    <script src="./scripts/timer.js"></script>
+    <!-- <script type="module" src="./main.js"></script> -->
     <!-- <script type="module" src="./js/2-form.js"></script> -->
   </body>
 </html>
