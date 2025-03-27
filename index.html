@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <script type="module" crossorigin src="/test/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/test/assets/modulepreload-polyfill-B5Qt9EMX.js">
     <link rel="stylesheet" crossorigin href="/test/assets/styles-4K5KV2cP.css">
   </head>
   <body>
@@ -17,8 +15,8 @@
       <a href="./page-2.html">page-2</a>
     </section>
 
-    <form class="feedback-form" autocomplete="off">
-      <!-- <label>
+    <!-- <form class="feedback-form" autocomplete="off"> -->
+    <!-- <label>
         Email
         <input type="email" name="email" autofocus />
       </label>
@@ -28,10 +26,22 @@
       </label>
       <button type="submit">Submit</button> -->
 
-      <!--NOTIFICATION -->
-      <p class="alert success js-alert">Success!</p>
-    </form>
+    <!-- </form> -->
 
+    <!--NOTIFICATION -->
+    <p class="alert success js-alert">Success!</p>
+
+    <!--timer-->
+    <div class="timer">
+      <p class="clockface"></p>
+
+      <div class="actions">
+        <button class="timer-btn" data-action-start>Start</button>
+        <button class="timer-btn" data-action-stop>Stop</button>
+      </div>
+    </div>
+    <script src="./scripts/timer.js"></script>
+    <!-- <script type="module" src="./main.js"></script> -->
     <!-- <script type="module" src="./js/2-form.js"></script> -->
   </body>
 </html>
