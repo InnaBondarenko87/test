@@ -50,14 +50,29 @@
 //   });
 // +++++++++++++++++++++++++++++++++
 
-const promise = new Promise(resolve => {
-  resolve(10);
-});
+// const promise = new Promise(resolve => {
+//   resolve(10);
+// });
 
-promise
-  .then(value => {
-    new Promise(resolve => {
-      resolve(value * 2);
-    });
-  })
-  .then(value => console.log(value));
+// promise
+//   .then(value => {
+//     new Promise(resolve => {
+//       resolve(value * 2);
+//     });
+//   })
+//   .then(value => console.log(value));
+// ============================================
+
+console.log('step 1');
+
+setTimeout(() => {
+  console.log('step 2');
+}, 0);
+
+new Promise(resolve => {
+  resolve('step 3');
+}).then(data => console.log(data));
+
+setTimeout(() => {
+  console.log('step 4');
+}, 0);
