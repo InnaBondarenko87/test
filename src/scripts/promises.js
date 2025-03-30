@@ -63,16 +63,56 @@
 //   .then(value => console.log(value));
 // ============================================
 
-console.log('step 1');
+// console.log('step 1');
 
-setTimeout(() => {
-  console.log('step 2');
-}, 0);
+// setTimeout(() => {
+//   console.log('step 2');
+// }, 0);
 
-new Promise(resolve => {
-  resolve('step 3');
-}).then(data => console.log(data));
+// new Promise(resolve => {
+//   resolve('step 3');
+// }).then(data => console.log(data));
 
-setTimeout(() => {
-  console.log('step 4');
-}, 0);
+// setTimeout(() => {
+//   console.log('step 4');
+// }, 0);
+// ============================
+
+// const makeOrder = (dish, onSuccess, onError) => {
+//   const random = Math.random();
+
+//   setTimeout(() => {
+//     if (random > 0.5) {
+//       onSuccess(`ваще замовлення ${dish}`);
+//       return;
+//     }
+
+//     onError('закінчився продукт!');
+//   }, 1000);
+// };
+
+// makeOrder(
+//   'пиріжок',
+//   str => console.log('onSuccess', str),
+//   str => console.log('onError', str)
+// );
+
+// II
+// const makeOrder = dish => {
+//   return new Promise((resolve, reject) => {
+//     const random = Math.random();
+
+//     setInterval(() => {
+//       if (random > 0.5) {
+//         resolve(`ваще замовлення ${dish}`);
+//       }
+
+//       reject('закінчився продукт!');
+//     }, 1500);
+//   });
+// };
+
+// makeOrder('пиріжок')
+//   .then(result => console.log(result))
+//   .catch(error => console.log(error));
+// ====================================
