@@ -116,3 +116,33 @@
 //   .then(result => console.log(result))
 //   .catch(error => console.log(error));
 // ====================================
+
+// без setInterval
+
+// const makeOrder = dish => {
+//   return new Promise((resolve, reject) => {
+//     const random = Math.random();
+
+//     if (random > 0.5) {
+//       resolve(`ваще замовлення ${dish}`);
+//     }
+
+//     reject('закінчився продукт!');
+//   });
+// };
+
+// makeOrder('пиріжок')
+//   .then(data => console.log(data))
+//   .catch(error => console.log(error));
+// =============================
+
+// без setInterval
+
+// const makeOrder = dish => {
+//   const random = Math.random();
+
+//   return random > 0.5
+//     ? Promise.resolve(`ваще замовлення ${dish}`)
+//     : Promise.reject('закінчився продукт!');
+// };
+// =============================================
